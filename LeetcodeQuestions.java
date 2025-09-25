@@ -60,6 +60,89 @@ public class LeetcodeQuestions {
         return maxArea;
         
     }
+
+    public int wateringPlants(int[] plants, int capacity) {
+        int steps=0;
+        int maxwater=capacity;
+        for(int i=0; i<plants.length ;i++){
+            
+            if (capacity<plants[i]) {
+                steps=steps+(2*i+1);
+                capacity=maxwater-plants[i];
+            }
+            else{
+                capacity=capacity-plants[i];
+                steps+=1;
+            }
+            
+        }
+        return steps;
+    }
+    public int minimumRefill(int[] plants, int capacityA, int capacityB) {
+        int refills=0;
+        int maxwaterA=capacityA;
+        int maxwaterB=capacityB;
+        for(int i=0; i<plants.length ;i++){
+            if (capacityA<plants[i]) {
+                refills+=1;
+                capacityA=maxwaterA;
+            }else{
+                capacityA=capacityA-plants[i];
+            }
+            for(int j=plants.length-1; j>=i; j--){
+                if (i==j) {
+                    if ((capacityA<capacityB && capacityB<plants[j]) || (capacityA>capacityB && capacityA<plants[i])) {
+                        refills+=1;
+                        return refills;
+                    }
+                    
+                    
+                }
+                if (capacityB<plants[j]) {
+                refills+=1;
+                capacityB=maxwaterB;
+                }else{
+                capacityB=capacityB-plants[j];
+                }
+            }
+            
+        }
+        return refills;
+        
+    }
+    public int minimumRefill2(int[] plants, int capacityA, int capacityB) {
+    int i = 0, j = plants.length - 1;
+    int refills = 0;
+    int currA = capacityA, currB = capacityB;
+
+    while (i <= j) {
+        if (i == j) { // both meet at the same plant
+            if (Math.max(currA, currB) < plants[i]) {
+                refills++;
+            }
+            break;
+        }
+
+        // Alice waters from left
+        if (currA < plants[i]) {
+            refills++;
+            currA = capacityA;
+        }
+        currA -= plants[i];
+        i++;
+
+        // Bob waters from right
+        if (currB < plants[j]) {
+            refills++;
+            currB = capacityB;
+        }
+        currB -= plants[j];
+        j--;
+    }
+
+    return refills;
+}
+
     public static void main(String[] args) {
         
     }
