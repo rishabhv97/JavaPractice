@@ -182,7 +182,24 @@ public int countGoodTriplets(int[] arr, int a, int b, int c) {
         return isPowerOfThree(n/3);
         
     }
+    
+    public static int triangularSum(int[] nums) {
+        int newNums[]=new int[nums.length-1];
+
+        if (nums.length==1) {
+            return nums[0];
+        }
+        for(int i=0; i<newNums.length ;i++){
+            newNums[i]=((nums[i]+nums[i+1])%10);
+        }
+
+        return triangularSum(newNums);
+
+    }
+
     public static void main(String[] args) {
-        System.out.println(isPowerOfThree(9));;
+        // System.out.println(isPowerOfThree(9));;
+        int[] arr={1,2,3,4,5};
+        System.out.println(triangularSum(arr));
     }
 }

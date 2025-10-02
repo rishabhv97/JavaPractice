@@ -1,5 +1,5 @@
 public class L20Assignment {
-    public static void printArr(int arr[]){
+    public static void printArr(String arr[]){
 
         for(int i=0; i<arr.length ; i++){
             System.out.print(arr[i]+" ");
@@ -8,7 +8,7 @@ public class L20Assignment {
     }
 
 
-    public static void mergeSort(int arr[], int si, int ei){
+    public static void mergeSort(String arr[], int si, int ei){
         if (si>=ei) {
             return;
         }
@@ -19,14 +19,15 @@ public class L20Assignment {
         merge(arr,si, mid, ei);
     }
 
-    public static void merge(int arr[], int si, int mid, int ei){
-        int temp[]= new int[ei-si+1];
+    public static void merge(String arr[], int si, int mid, int ei){
+        String temp[]= new String[ei-si+1];
+        
         int i=si;
         int j= mid+1;
         int k=0;
 
         while (i<= mid && j<= ei) {
-            if (arr[i]<arr[j]) {
+            if (arr[i].compareTo(arr[j])<=0) {
                 temp[k]=arr[i];
                 i++; 
             }else{
@@ -52,6 +53,8 @@ public class L20Assignment {
         }
     }
     public static void main(String[] args) {
-        
+        String arr[]={"sun","earth","mars","mercury"};
+        mergeSort(arr, 0, arr.length-1);
+        printArr(arr);
     }
 }
