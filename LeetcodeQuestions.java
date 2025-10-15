@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class LeetcodeQuestions {
     public int countPairs(int[] nums, int k) {
         int count=0;
@@ -195,6 +198,72 @@ public int countGoodTriplets(int[] arr, int a, int b, int c) {
 
         return triangularSum(newNums);
 
+    }
+    public static double[] convertTemperature(double celsius) {
+        double ans[]=new double[2];
+        ans[0]=celsius + 273.15;
+        ans[1]=celsius * 1.80 + 32.00;
+        return ans;
+    }
+
+    public int[] buildArray(int[] nums) {
+        int ans[]=new int[nums.length];
+        for (int i=0; i < nums.length; i++ ){
+            ans[i]=nums[nums[i]];
+        }
+        return ans;
+        
+    }
+
+    public int finalValueAfterOperations(String[] operations) {
+        int ans=0;
+        for(int i=0; i<operations.length ; i++){
+            if (operations[i].equals("X++") || operations[i].equals("++X")) {
+                ans++;
+            }else if (operations[i].equals("X--") || operations[i].equals("--X")) {
+                ans--;
+            }
+        }
+
+        return ans;
+    }
+
+    public int scoreOfString(String s) {
+        int sum=0;
+        for(int i=0; i<s.length()-1; i++){
+            sum+=Math.abs((int)s.charAt(i)-(int)s.charAt(i+1));
+        }
+        return sum;
+    }
+
+    public int differenceOfSums(int n, int m) {
+        
+        int num1=0;
+        int num2=0;
+        for(int i=0; i<=n; i++){
+            if (i%m==0) {
+                num2+=i;
+            }else num1+=i;
+        }
+        return num1-num2;
+    }
+
+    public List<String> fizzBuzz(int n) {
+        List<String> ans = new ArrayList<>();
+        for(int i=0; i<n; i++){
+            if (i%3==0 && i%5==0) {
+                ans.add("FizzBuzz");
+            } else if (i%3==0) {
+                ans.add("Fizz");
+            } else if (i%5==0) {
+                ans.add("Fuzz");
+            } else{
+                
+                ans.add(Integer.toString(i));
+            }
+        }
+
+        return ans;
     }
 
     public static void main(String[] args) {
