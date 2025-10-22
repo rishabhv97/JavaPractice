@@ -47,6 +47,17 @@ public class L19Recursion2 {
         //     printBinStrings(n-1,0, str.append("0"));
         // }
     }
+
+    public static void hanoi(int n,char A, char B, char C){
+        if (n==1) {
+            System.out.println("Transfer disk "+ n +" from "+ A +" to "+ C);
+            return;
+        }
+
+        hanoi(n-1, A, C, B);
+        System.out.println("Transfer disk "+ n +" from "+ A +" to "+ C);
+        hanoi(n-1, B, A, C);
+    }
     public static void main(String[] args) {
         // System.out.println(tileProblem(6));
         // String str ="appnnacollege";
