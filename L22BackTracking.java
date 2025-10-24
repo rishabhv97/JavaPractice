@@ -54,6 +54,8 @@ public class L22BackTracking {
         }
     }
 
+
+    // nqueens for printing all solutions
     public static void nQueens(char board[][], int row) {
 
         if (row == board.length) {
@@ -70,6 +72,29 @@ public class L22BackTracking {
             }
 
         }
+    }
+    // code for chaeck if solution exsists or not .
+
+    public static boolean nQueens2(char board[][], int row) {
+
+        if (row == board.length) {
+            printBoard(board);
+            count++;
+            return true;
+        }
+
+        for (int j = 0; j < board.length; j++) {
+            if (isSafe(board, row, j)) {
+                board[row][j] = 'Q';
+                if (nQueens2(board, row + 1)) {
+                    return true ;
+                }
+                // func call
+                board[row][j] = 'X'; // backtracking
+            }
+
+        }
+        return false;
     }
 
     public static boolean isSafe(char board[][], int row, int col){
@@ -109,6 +134,18 @@ public class L22BackTracking {
 
     static int count =0 ;
 
+    public static int gridWays(int i, int j, int n, int m){
+        if (i==n-1 && j==m-1) {
+            return 1;
+        }else if (i==n || j==n) {
+            return 0;
+        }
+
+        int w1=gridWays(i+1, j, n, m);
+        int w2=gridWays(i, j+1, n, m);
+        return w1+w2;
+    }
+
     public static void main(String[] args) {
         // int arr[]= new int[5];
         // changeArr(arr, 0, 1);
@@ -117,17 +154,31 @@ public class L22BackTracking {
         // String str="abc";
         // findSubsets(str, "", 0);
 
-        int n = 4;
-        char board[][] = new char[n][n];
-        // intialize
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                board[i][j] = 'X';
-            }
-        }
 
-        nQueens(board, 0);
-        System.out.println("Total ways to solve n queens = " + count);
+
+        // int n = 4;
+        // char board[][] = new char[n][n];
+        // // intialize
+        // for (int i = 0; i < n; i++) {
+        //     for (int j = 0; j < n; j++) {
+        //         board[i][j] = 'X';
+        //     }
+        // }
+
+        // nQueens(board, 0);
+        // System.out.println("Total ways to solve n queens = " + count);
+
+        // //for nqueens2 
+        // if (nQueens2(board, 0)) {
+        //     System.out.println("solution is possible ");
+        //     printBoard(board);
+        // }else{
+        //     System.out.println( " solution is not possible");
+        // }
+
+        //Grid Ways
+        int n=3, m=3;
+        System.out.println(gridWays(0,0, n, m));
 
     }
 }
