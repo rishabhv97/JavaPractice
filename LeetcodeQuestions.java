@@ -328,17 +328,47 @@ public class LeetcodeQuestions {
     public int trailingZeroes(int n) {
         int fact = factorial(n);
         int count = 0;
-        while (fact>0) {
-           if (fact % 10 == 0) {
-            count++;
-            fact = fact / 10;
-        } else break;
+        while (fact > 0) {
+            if (fact % 10 == 0) {
+                count++;
+                fact = fact / 10;
+            } else
+                break;
         }
-        
+
         return count;
     }
 
+    class Solution {
+        int[] dp = new int[46];
 
+        public int climbStairs(int n) {
+            if (n == 0 || n == 1)
+                return 1;
+            if (dp[n] != 0)
+                return dp[n];
+            return dp[n] = climbStairs(n - 1) + climbStairs(n - 2);
+        }
+    }
+    class Solution2 {
+        int[] dp = new int[31];
+
+    public int fib(int n) {
+        if (n==0||n==1) {
+            return n;
+        }
+        if (dp[n] !=0) {
+            return dp[n];
+        }
+        return dp[n]=fib(n-1)+fib(n-2);
+    }
+}
+
+public boolean isAnagram(String s, String t) {
+        for(int i=0; i<s.length(); i++){
+            
+        }
+    }
 
     public static void main(String[] args) {
         // System.out.println(isPowerOfThree(9));;
