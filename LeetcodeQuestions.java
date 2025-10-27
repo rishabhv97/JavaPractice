@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
+
 
 public class LeetcodeQuestions {
     public int countPairs(int[] nums, int k) {
@@ -369,6 +371,101 @@ public boolean isAnagram(String s, String t) {
             
         }
     }
+
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int[] result= new int[n+m];
+
+        int p1=m-1,p2=n-1;
+
+        for(int p3=n+m-1; p3>=0 ; p3--){
+            int val1=(p1<0)? Integer.MIN_VALUE :nums1[p1];
+            int val2=(p2<0)? Integer.MIN_VALUE :nums2[p2];
+            if (val1<val2) {
+                result[p3]=val2;
+                p2--;
+            }else{
+                result[p3]=val1;
+                p1--;
+            }
+
+        }
+        System.out.println(nums1);
+    }
+
+
+    //MErge Sort Question 
+    class Solutions {
+
+    public void mergeSort(int[] arr, int si, int ei){
+        if (si >= ei) return;
+
+        int mid = si + (ei - si) / 2;
+        mergeSort(arr, si, mid);
+        mergeSort(arr, mid + 1, ei);
+        merge2(arr, si, mid, ei);
+    }
+
+    public void merge2(int[] arr, int si, int mid, int ei){
+        int[] temp = new int[ei - si + 1];
+        int i = si, j = mid + 1, k = 0;
+
+        while (i <= mid && j <= ei) {
+            if (arr[i] < arr[j]) {
+                temp[k++] = arr[i++];
+            } else {
+                temp[k++] = arr[j++];
+            }
+        }
+
+        // Copy remaining elements
+        while (i <= mid) temp[k++] = arr[i++];
+        while (j <= ei) temp[k++] = arr[j++];
+
+        // Copy back to original array
+        for (k = 0, i = si; k < temp.length; k++, i++) {
+            arr[i] = temp[k];
+        }
+    }
+
+    public int[] sortArray(int[] nums) {
+        mergeSort(nums, 0, nums.length - 1);
+        return nums;
+    }
+}
+
+    // 
+
+    public int[] intersection(int[] nums1, int[] nums2) {
+         Arrays.sort(nums1);
+         Arrays.sort(nums2);
+
+        int i=0,j=0;
+        ArrayList<Integer> result = new ArrayList<>();
+
+        while (i<=nums1.length || j<=nums2.length) {
+            if (nums1[i]==nums2[j]) {
+                if (result.isEmpty()|| result.get(result.size()-1)!=nums1[i]) {
+                    result.add(nums1[i]);
+                    
+                }
+                i++;
+                j++;
+            }else if (nums1[i]>nums2[j]) {
+                j++;
+            }else{
+                i++;
+            }
+        }
+
+        int [] resultArr=new int[result.size()];
+        for(int k=0; k<result.size(); k++){
+            resultArr[k]=result.get(k);
+        }
+
+        return resultArr;
+        
+        }
+    
 
     public static void main(String[] args) {
         // System.out.println(isPowerOfThree(9));;
