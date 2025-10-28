@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
-
+import java.util.*;
 
 public class LeetcodeQuestions {
     public int countPairs(int[] nums, int k) {
@@ -352,39 +352,41 @@ public class LeetcodeQuestions {
             return dp[n] = climbStairs(n - 1) + climbStairs(n - 2);
         }
     }
+
     class Solution2 {
         int[] dp = new int[31];
 
-    public int fib(int n) {
-        if (n==0||n==1) {
-            return n;
+        public int fib(int n) {
+            if (n == 0 || n == 1) {
+                return n;
+            }
+            if (dp[n] != 0) {
+                return dp[n];
+            }
+            return dp[n] = fib(n - 1) + fib(n - 2);
         }
-        if (dp[n] !=0) {
-            return dp[n];
-        }
-        return dp[n]=fib(n-1)+fib(n-2);
     }
-}
 
-public boolean isAnagram(String s, String t) {
-        for(int i=0; i<s.length(); i++){
-            
+    public boolean isAnagram(String s, String t) {
+
+        for (int i = 0; i < s.length(); i++) {
+
         }
     }
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int[] result= new int[n+m];
+        int[] result = new int[n + m];
 
-        int p1=m-1,p2=n-1;
+        int p1 = m - 1, p2 = n - 1;
 
-        for(int p3=n+m-1; p3>=0 ; p3--){
-            int val1=(p1<0)? Integer.MIN_VALUE :nums1[p1];
-            int val2=(p2<0)? Integer.MIN_VALUE :nums2[p2];
-            if (val1<val2) {
-                result[p3]=val2;
+        for (int p3 = n + m - 1; p3 >= 0; p3--) {
+            int val1 = (p1 < 0) ? Integer.MIN_VALUE : nums1[p1];
+            int val2 = (p2 < 0) ? Integer.MIN_VALUE : nums2[p2];
+            if (val1 < val2) {
+                result[p3] = val2;
                 p2--;
-            }else{
-                result[p3]=val1;
+            } else {
+                result[p3] = val1;
                 p1--;
             }
 
@@ -392,80 +394,218 @@ public boolean isAnagram(String s, String t) {
         System.out.println(nums1);
     }
 
-
-    //MErge Sort Question 
+    // MErge Sort Question
     class Solutions {
 
-    public void mergeSort(int[] arr, int si, int ei){
-        if (si >= ei) return;
+        public void mergeSort(int[] arr, int si, int ei) {
+            if (si >= ei)
+                return;
 
-        int mid = si + (ei - si) / 2;
-        mergeSort(arr, si, mid);
-        mergeSort(arr, mid + 1, ei);
-        merge2(arr, si, mid, ei);
-    }
+            int mid = si + (ei - si) / 2;
+            mergeSort(arr, si, mid);
+            mergeSort(arr, mid + 1, ei);
+            merge2(arr, si, mid, ei);
+        }
 
-    public void merge2(int[] arr, int si, int mid, int ei){
-        int[] temp = new int[ei - si + 1];
-        int i = si, j = mid + 1, k = 0;
+        public void merge2(int[] arr, int si, int mid, int ei) {
+            int[] temp = new int[ei - si + 1];
+            int i = si, j = mid + 1, k = 0;
 
-        while (i <= mid && j <= ei) {
-            if (arr[i] < arr[j]) {
+            while (i <= mid && j <= ei) {
+                if (arr[i] < arr[j]) {
+                    temp[k++] = arr[i++];
+                } else {
+                    temp[k++] = arr[j++];
+                }
+            }
+
+            // Copy remaining elements
+            while (i <= mid)
                 temp[k++] = arr[i++];
-            } else {
+            while (j <= ei)
                 temp[k++] = arr[j++];
+
+            // Copy back to original array
+            for (k = 0, i = si; k < temp.length; k++, i++) {
+                arr[i] = temp[k];
             }
         }
 
-        // Copy remaining elements
-        while (i <= mid) temp[k++] = arr[i++];
-        while (j <= ei) temp[k++] = arr[j++];
-
-        // Copy back to original array
-        for (k = 0, i = si; k < temp.length; k++, i++) {
-            arr[i] = temp[k];
+        public int[] sortArray(int[] nums) {
+            mergeSort(nums, 0, nums.length - 1);
+            return nums;
         }
     }
 
-    public int[] sortArray(int[] nums) {
-        mergeSort(nums, 0, nums.length - 1);
-        return nums;
-    }
-}
-
-    // 
+    //
 
     public int[] intersection(int[] nums1, int[] nums2) {
-         Arrays.sort(nums1);
-         Arrays.sort(nums2);
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
 
-        int i=0,j=0;
+        int i = 0, j = 0;
         ArrayList<Integer> result = new ArrayList<>();
 
-        while (i<=nums1.length || j<=nums2.length) {
-            if (nums1[i]==nums2[j]) {
-                if (result.isEmpty()|| result.get(result.size()-1)!=nums1[i]) {
+        while (i <= nums1.length || j <= nums2.length) {
+            if (nums1[i] == nums2[j]) {
+                if (result.isEmpty() || result.get(result.size() - 1) != nums1[i]) {
                     result.add(nums1[i]);
-                    
+
                 }
                 i++;
                 j++;
-            }else if (nums1[i]>nums2[j]) {
+            } else if (nums1[i] > nums2[j]) {
                 j++;
-            }else{
+            } else {
                 i++;
             }
         }
 
-        int [] resultArr=new int[result.size()];
-        for(int k=0; k<result.size(); k++){
-            resultArr[k]=result.get(k);
+        int[] resultArr = new int[result.size()];
+        for (int k = 0; k < result.size(); k++) {
+            resultArr[k] = result.get(k);
         }
 
         return resultArr;
+
+    }
+
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+
+        Arrays.sort(candidates);
+        List<List<Integer>> result = new ArrayList<>();
+        backtrack(result, new ArrayList<>(), candidates, target, 0);
+        return result;
         
-        }
+
+    }
+
     
+
+    public int maxArea(int[] height) {
+        int maxArea=0;
+        int lp=0;
+        int rp=height.length-1;
+
+        while (lp<rp) {
+            int currArea=Math.min(height[lp],height[rp])*(rp-lp);
+            maxArea=Math.max(maxArea, currArea);
+            if (height[lp]<height[rp]) {
+                lp++;
+            }else{
+                rp--;
+            }
+
+        }
+        return maxArea;
+    }
+
+// All solution of n queens
+    public List<List<String>> solveNQueens(int n) {
+        char[][] board = new char[n][n];
+        for (char[] row : board) {
+            Arrays.fill(row, '.');
+        }
+        
+        List<List<String>> result = new ArrayList<>();
+        nQueens(board, 0, result);
+        return result;
+    }
+    
+    private void nQueens(char[][] board, int row, List<List<String>> result) {
+        if (row == board.length) {
+            List<String> currentBoard= new ArrayList<>();
+            for(char[] r: board){
+                currentBoard.add(new String(r));
+            }
+            result.add(currentBoard);
+            // List<String> currentBoard = new ArrayList<>();
+            // for (char[] r : board) {
+            //     currentBoard.add(new String(r));
+            // }
+            // result.add(currentBoard);
+            return;
+        }
+        
+        for (int col = 0; col < board.length; col++) {
+            if (isSafe(board, row, col)) {
+                board[row][col] = 'Q';
+                nQueens(board, row + 1, result);
+                board[row][col] = '.'; // backtrack
+            }
+        }
+    }
+    
+    private boolean isSafe(char[][] board, int row, int col) {
+        // vertical up
+        for (int i = row - 1; i >= 0; i--) if (board[i][col] == 'Q') return false;
+
+        // diagonal left up
+        for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) if (board[i][j] == 'Q') return false;
+
+        // diagonal right up
+        for (int i = row - 1, j = col + 1; i >= 0 && j < board.length; i--, j++) if (board[i][j] == 'Q') return false;
+
+        return true;
+    }
+
+    int QueenSol=0;
+    // for total number of solution 
+    public int totalNQueens(int n) {
+        char[][] board = new char[n][n];
+        for (char[] row : board) {
+            Arrays.fill(row, '.');
+        }
+
+        nQueens2(board, 0);
+        return QueenSol;
+
+
+
+        
+    }
+
+    private void nQueens2(char[][] board, int row){
+        if (row==board.length) {
+            QueenSol++;
+        }
+
+        for (int col = 0; col < board.length; col++) {
+            if (isSafe(board, row, col)) {
+                board[row][col] = 'Q';
+                nQueens2(board, row + 1);
+                board[row][col] = '.'; // backtrack
+            }
+        }
+
+
+    }
+
+
+    int totalTiles=0;
+// permutation type Question
+    public int numTilePossibilities(String tiles) {
+        char[] chars = tiles.toCharArray();
+        Arrays.sort(chars); // sort to handle duplicates
+        stringPermutation(new String(chars), "");
+        return totalTiles;
+        
+        
+        
+    }
+    private void stringPermutation(String Str, String ans) {
+    if (!ans.equals("")) {
+        totalTiles++;
+    }
+
+    for (int i = 0; i < Str.length(); i++) {
+        if (i > 0 && Str.charAt(i) == Str.charAt(i - 1)) continue;
+
+        char currChar = Str.charAt(i);
+        String newStr = Str.substring(0, i) + Str.substring(i + 1);
+        stringPermutation(newStr, ans + currChar);
+    }
+}
 
     public static void main(String[] args) {
         // System.out.println(isPowerOfThree(9));;
