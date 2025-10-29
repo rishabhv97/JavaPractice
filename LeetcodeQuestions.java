@@ -607,9 +607,47 @@ public class LeetcodeQuestions {
     }
 }
 
+public List<List<Integer>> threeSum(int[] nums) {
+        Arrays.sort(nums);
+        List<List<Integer>> threeSum = new ArrayList<>();
+        
+        
+        for(int i=0; i<nums.length; i++){
+            if (i>0 && nums[i]==nums[i-1]) {
+                continue;
+            }
+            int lp=i+1,rp=nums.length-1;
+
+            while (lp<rp) {
+                int sum=nums[i]+nums[lp]+nums[rp];
+                if (sum==0) {
+                threeSum.add(Arrays.asList(nums[i], nums[lp], nums[rp]));
+                
+
+                while (lp<rp && nums[lp]==nums[lp+1]) {
+                    lp++;
+                }
+
+                while (lp<rp && nums[rp]==nums[rp-1]) {
+                    rp++;
+                }
+            }else if (sum>0) {
+                rp--;
+            }else{
+                lp++;
+            }
+            }
+            
+
+        }
+
+        return threeSum;    
+    }
+
     public static void main(String[] args) {
         // System.out.println(isPowerOfThree(9));;
-        int[] arr = { 1, 2, 3, 4, 5 };
+        int[] arr = { -1,0,1,2,-1,-4 };
+        // arr = / -4,-1,-1,0,1,2
         System.out.println(triangularSum(arr));
     }
 }
