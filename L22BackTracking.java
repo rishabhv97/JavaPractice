@@ -160,6 +160,7 @@ public class L22BackTracking {
         }
 
         if (sudoku[row][col]!=0) {
+            //for skip the pre-given number     
             return sudokuSolver(sudoku, nextRow, nextCol);
         }
 

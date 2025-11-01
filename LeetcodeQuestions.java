@@ -644,6 +644,105 @@ public List<List<Integer>> threeSum(int[] nums) {
         return threeSum;    
     }
 
+
+    class Solution {
+
+    public void solveSudoku(char[][] board) {
+        int row=0;
+        int col=0;
+        sudokuSolver(board, row, col);
+        
+        
+    }
+
+    private boolean sudokuSolver(char sudoku[][], int row, int col){
+        //base case 
+        if (row==9 && col==0) {
+            return true;
+
+        }
+
+        int nextRow = row, nextCol=col+1;
+        if (col+1==9) {
+            nextRow=row+1;
+            nextCol=0;
+        }
+
+        if (sudoku[row][col]!=0) {
+            //for skip the pre-given number     
+            return sudokuSolver(sudoku, nextRow, nextCol);
+        }
+
+        for(int digit =0; digit<=9; digit++){
+
+            if (isSafeSudoku(sudoku, row,col,digit)) {
+                sudoku[row][col]=(char)digit;
+                if (sudokuSolver(sudoku, nextRow, nextCol)) {
+                    return true;
+                }
+                sudoku[row][col]=0;
+            }
+        }
+        return false;
+    }
+
+    private boolean isSafeSudoku(char sudoku[][],int row,int col,int digit){
+        //row
+        for(int i=0; i<=8; i++){
+            if (sudoku[i][col]==(char)digit) {
+                return false;
+            }
+        }
+//col
+        for(int j=0; j<=8; j++){
+            if (sudoku[row][j]==(char)digit) {
+                return false;
+            }
+        }
+
+        //grid
+        int sr=(row/3)*3;
+        int sc=(col/3)*3;
+
+        for(int i= sr; i<sr+3; i++){
+            for(int j=sc; j<sc+3; j++){
+                if (sudoku[i][j]==(char)digit) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    private void printSudoku(char sudoku[][]){
+        for(int i=0; i<9 ;i++ ){
+            for(int j=0;  j<9; j++){
+                System.out.print(sudoku[i][j]+ " ");
+            }
+            System.out.println();
+        }
+
+    
+    }
+}
+
+public boolean searchMatrix(int[][] matrix, int target) {
+        int row=0;int col=matrix[0].length-1;
+
+
+        while (row<matrix.length && col>=0) {
+            if (matrix[row][col]==target) {
+                return true;
+            }else if (target < matrix[row][col]) {
+                col--;
+            }else{
+                row++;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         // System.out.println(isPowerOfThree(9));;
         int[] arr = { -1,0,1,2,-1,-4 };
