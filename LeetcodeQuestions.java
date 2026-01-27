@@ -743,10 +743,41 @@ public boolean searchMatrix(int[][] matrix, int target) {
         return false;
     }
 
+    public static int search(int[] nums, int target) {
+        Arrays.sort(nums);
+        int start=0;
+        int end=nums.length-1;
+        while(start<end){
+            int mid=start-(end-start)/2;
+            if(nums[mid]==target){
+                return mid;
+            }
+            if(target<nums[mid]){
+                end=mid;
+            }else{
+                start=mid+1;
+            }
+        }
+        return -1;
+    }
+
+    public int maxSubArray(int[] nums) {
+        Arrays.sort(nums);
+        int lp=0;
+        int rp=nums.length-1;
+        int maxSum=Integer.MIN_VALUE;
+        for(int i=0; i<nums.length; i++){
+            int sum=0;
+            
+        }
+    }
+
     public static void main(String[] args) {
         // System.out.println(isPowerOfThree(9));;
         int[] arr = { -1,0,1,2,-1,-4 };
         // arr = / -4,-1,-1,0,1,2
-        System.out.println(triangularSum(arr));
+        // System.out.println(triangularSum(arr));
+        System.out.println(search(arr, 1));
+
     }
 }

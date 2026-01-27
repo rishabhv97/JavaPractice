@@ -20,7 +20,7 @@ public class Arrays12 {
                     maxSum=currSum;
                 }
             }
-        }
+        } 
        System.out.println("Max of Subarray is: "+maxSum);
     }
 
@@ -34,6 +34,30 @@ public class Arrays12 {
                 cs=0;
             }
             ms = Math.max(cs, ms);
+        }
+        System.out.println("Our Max Sum is : "+ ms);
+    }
+
+    public static void kadanesWithNegative(int numbers[]){
+        int ms= Integer.MIN_VALUE;
+        int cs =0;
+
+        for(int i=0; i<numbers.length; i++){
+            cs= cs+numbers[i];
+            if(cs<0){
+                cs=0;
+            }
+            ms = Math.max(cs, ms);
+        }
+
+        if (ms==0) {
+            int sm=numbers[0];
+            for(int i=0; i<numbers.length ; i++){
+                if (sm<numbers[i]) {
+                    sm=numbers[i];
+                }
+
+            }
         }
         System.out.println("Our Max Sum is : "+ ms);
     }

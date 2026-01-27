@@ -388,11 +388,36 @@ public class Linkedlist {
         }
     }
 
+    
+
+    public void MNDelete(int m, int n){
+        Node temp=head;
+        while (temp!=null) {
+            int i=0,j=0;
+            while (i<m) {
+                temp=temp.next;
+                i++;
+            }
+            while (j<n) {
+
+                if (temp.next!=null) {
+                    temp.next=temp.next.next;
+                    
+                }
+                j++;
+                
+            }
+            i=0;
+            j=0;
+
+        }
+    }
+
     public static void main(String[] args) {
         Linkedlist ll = new Linkedlist();
 
-        // ll.addFirst(2);
         // ll.addFirst(1);
+        // ll.addFirst(2);
         // ll.addFirst(3);
         // ll.addFirst(4);
         // ll.addFirst(5);
@@ -402,10 +427,18 @@ public class Linkedlist {
         ll.addLast(3);
         ll.addLast(4);
         ll.addLast(5);
+        ll.addLast(6);
+        ll.addLast(7);
+        ll.addLast(8);
 
         ll.print();
-        ll.zigZag();
+        ll.MNDelete(2, 2);
         ll.print();
+        
+
+        // ll.print();
+        // ll.zigZag();
+        // ll.print();
 
         // ll.addLast(2);
         // ll.addLast(1);
