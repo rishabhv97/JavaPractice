@@ -203,6 +203,30 @@ public class LeetcodeQuestions2 {
         return fourSum;
     }
 
+
+    // Leet code question number:- 1441
+    public List<String> buildArray(int[] target, int n) {
+        List<String> result=new ArrayList<>();
+        
+        int j=0;
+        for(int i=1; i<=n; i++){
+            result.add("Push");
+            if (target[j]==i) {
+                j++;
+                if (j==target.length) {
+                    break;
+                }
+            }
+            else{
+                result.add("Pop");
+            }
+        }
+        
+
+        return result;
+
+    }
+
     public static void main(String[] args) {
         // int[] arr = { 1, 2, 1 };
         // System.out.println(majorityElement(arr));
