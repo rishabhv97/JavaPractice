@@ -2,7 +2,7 @@ import java.util.Stack;
 
 public class L26NextGreater {
 
-    
+     
     public static void main(String[] args) {
         int arr[]={6,8,0,1,3};
 

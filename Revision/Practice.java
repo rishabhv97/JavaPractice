@@ -1,5 +1,7 @@
 package Revision;
 
+import java.util.Stack;
+
 public class Practice {
     public boolean isUgly(int n) {
 
@@ -38,8 +40,9 @@ public class Practice {
         
 
     
+    
     public static void main(String[] args) {
-        
+        System.out.println(simplifyPath("/home/user/Documents/../Pictures"));
          
     }
 }

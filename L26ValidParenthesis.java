@@ -23,7 +23,7 @@ public class L26ValidParenthesis {
         if (s.isEmpty()) {
             return true;
         }else{
-            return false;
+            return false; 
         }
 
     }
