@@ -1,6 +1,7 @@
 package Revision;
 
 import java.util.Stack;
+import java.util.*;
 
 public class Practice {
     public boolean isUgly(int n) {
@@ -43,6 +44,23 @@ public class Practice {
     
     public static void main(String[] args) {
         System.out.println(simplifyPath("/home/user/Documents/../Pictures"));
+
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        int[] arr={2,5,7,8,2,1,5,2};
+        
+        for (int num: arr) {
+            // if(hashMap.containsKey(num)){
+            //   hashMap.put(num, hash) 
+            // }
+            
+            hashMap.put(num, hashMap.getOrDefault(num,0)+1);
+            
+            
+        }
+        
+        for(int key: hashMap.keySet()){
+            System.out.println(key+":"+hashMap.get(key));
+        }
          
     }
 }
