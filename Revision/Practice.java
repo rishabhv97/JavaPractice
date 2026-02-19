@@ -2,6 +2,7 @@ package Revision;
 
 import java.util.Scanner;
 import java.util.Stack;
+import java.util.*;
 
  class student{
     private String name;
@@ -125,6 +126,7 @@ public class Practice {
 
         
 
+
         switch (s) {
             case 1:
                 System.out.println("The primal Force");
@@ -149,8 +151,32 @@ public class Practice {
         
             default:
                 
-                break;
+                break;}
         }
+
+
+    
+    
+    public static void main(String[] args) {
+        System.out.println(simplifyPath("/home/user/Documents/../Pictures"));
+
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        int[] arr={2,5,7,8,2,1,5,2};
+        
+        for (int num: arr) {
+            // if(hashMap.containsKey(num)){
+            //   hashMap.put(num, hash) 
+            // }
+            
+            hashMap.put(num, hashMap.getOrDefault(num,0)+1);
+            
+            
+        }
+        
+        for(int key: hashMap.keySet()){
+            System.out.println(key+":"+hashMap.get(key));
+        }
+         
 
     }
 
