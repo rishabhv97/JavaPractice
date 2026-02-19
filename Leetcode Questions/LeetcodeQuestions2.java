@@ -352,24 +352,95 @@ public class LeetcodeQuestions2 {
         return res.length() == 0 ? "/" : res.toString();
     }
 
-    
-    
+    // public boolean parseBoolExpr(String expression) {
+    //     Stack<Character> st1 = new Stack<>();
+    //     Stack<Character> st2 = new Stack<>();
+    //     boolean res;
 
-    public boolean parseBoolExpr(String expression) {
-        Stack<Character> st1=new Stack<>();
-        Stack<Character> st2=new Stack<>();
+    //     int n = expression.length();
+    //     for (int i = 0; i < n; i++) {
+    //         if (expression.charAt(i) == '&' || expression.charAt(i) == '|' || expression.charAt(i) == '!') {
+    //             st1.push(expression.charAt(i));
+    //         }
+    //     }
+    //     for (int i = n - 1; i > 0; i--) {
+    //         if (expression.charAt(i) == 'f' || expression.charAt(i) == 't' || expression.charAt(i) == ')') {
+    //             st2.push(expression.charAt(i));
+    //         } else if (expression.charAt(i) == '(') {
+    //             while (!st2.isEmpty() && st2.peek() != ')') {
+    //                 char logic = st2.pop();
+    //                 if (logic == 'f') {
+    //                     if (st1.peek() == '&') {
+    //                         res = false;
+    //                     } else if (st1.peek() == '|') {
+    //                         res = res || false;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 
+    public boolean parseBoolExpr(String expression){
+        Stack<Character> st =new Stack<>();
         int n=expression.length();
-        for(int i=n-1; i>0;i-- ){
-            if (expression.charAt(i)=='|'||expression.charAt(i)=='&'||expression.charAt(i)=='!') {
-                st1.push(expression.charAt(i));
+
+        for(int i=0; i<n ;i++){
+            if (expression.charAt(i)==','||expression.charAt(i)=='(') {
+                continue;
+            }else if (expression.charAt(i)!=')') {
+                
+                st.push(expression.charAt(i));
+            }else{
+                boolean flagTrue=false;
+                boolean flagFalse=false;
+
+                while (st.peek()=='t'||st.peek()=='f') {
+                    char ch=st.pop();
+                    if (ch=='f') {
+                        flagFalse=true;
+                    }else if (ch=='t') {
+                        flagTrue=true;
+                    }
+                }
+
+                char operator=st.pop();
+                if (operator=='!') {
+                    if (flagTrue) {
+                        st.push('f');
+                    }else{
+                        st.push('t');
+                    }
+                }else if (operator=='&') {
+                    if (flagFalse) {
+                        st.push('f');
+                    }else{
+                        st.push('t');
+                    }
+                }else if (operator=='|') {
+                    if (flagTrue) {
+                        st.push('t');
+                    }else{
+                        st.push('f');
+                    }
+
+
+                }
             }
+            
         }
+
+        if (st.peek()=='t') {
+            return true;
+        }else{
+            return false;
+        }
+
+
     }
 
     public static void main(String[] args) {
-        String str = "/home/user/Documents/../Pictures";
-        String[] parts = str.split("/");
-        System.out.println(parts);
+        boolean r = true & false;
+        System.out.println("hii");
     }
 }

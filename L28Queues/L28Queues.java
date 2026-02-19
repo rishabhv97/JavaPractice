@@ -1,3 +1,5 @@
+package L28Queues;
+import java.util.LinkedList;
 import java.util.Queue;
 
 public class L28Queues {
@@ -54,7 +56,18 @@ public class L28Queues {
         
     }
     public static void main(String[] args) {
-        QueueLL q=new QueueLL();
+        // QueueLL q=new QueueLL();
+        // q.add(1);
+        // q.add(2);
+        // q.add(3);
+
+        // while (!q.isEmpty()) {
+        //     System.out.println(q.peek());
+        //     q.remove();
+        // }
+
+//Queue Implementation using  
+        Queue<Integer> q= new LinkedList<>();  
         q.add(1);
         q.add(2);
         q.add(3);
