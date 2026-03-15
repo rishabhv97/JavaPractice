@@ -148,6 +148,7 @@ public class Linkedlist {
         return helper(head, key);
     }
 
+    // reverse
     public void reverse() {
         Node prev = null;
         Node curr = tail = head;
