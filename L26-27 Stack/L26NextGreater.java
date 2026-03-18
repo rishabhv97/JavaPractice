@@ -9,7 +9,7 @@ public class L26NextGreater {
         Stack<Integer> s=new Stack<>();
         int nxtGreater[]=new int[arr.length];
 
-        for(int i=arr.length-1;i>=0; i-- ){
+        for(int i=arr.length-1;  i>=0 ; i-- ){
             while (!s.isEmpty() && arr[s.peek()]<= arr[i]) {
                 s.pop();
             }

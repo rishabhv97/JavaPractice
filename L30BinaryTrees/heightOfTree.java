@@ -44,6 +44,43 @@ public class heightOfTree {
         return leftSum+rightSum + root.data ; 
     }
 
+public static int diameter(Node root){
+    if(root==null){
+        return 0;
+    }
+    int leftDiameter = diameter(root.left);
+    int lh=height(root.left);
+    int rightDiameter = diameter(root.right);
+    int rh=height(root.right);
+    int selfDiameter = lh+rh+1;
+    
+
+    return Math.max( Math.max(rightDiameter, leftDiameter), selfDiameter);
+}
+
+// 2nd Approach for diameter counting
+static class info {
+    int diam;
+    int ht;
+    public info( int diam, int ht){
+        this.diam=diam;
+        this.ht=ht;
+    }
+    
+}
+public static info diameter2(Node root){
+    if (root==null) {
+        return new info(0, 0);
+    }
+
+    info leftInfo=diameter2(root.left);
+    info rightInfo=diameter2(root.right);
+
+    int diam = Math.max(Math.max(leftInfo.diam, rightInfo.diam), leftInfo.ht+rightInfo.ht+1);
+    int ht= 1+Math.max(leftInfo.ht , rightInfo.ht); 
+
+    return new info(diam, ht);
+}
     public static void main(String[] args) {
         Node root =new Node(1);
         root.left= new Node(2);
@@ -53,6 +90,6 @@ public class heightOfTree {
         root.right.left= new Node(6);
         root.right.right= new Node(7);
 
-        System.out.println(nodeNum(root));
+        System.out.println(diameter2(root).diam);
     }
 }
