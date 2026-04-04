@@ -37,12 +37,18 @@ public class practiceQues {
     }
 
     // question 2
-    public static void invertBinaryTree(Node root){
+    public static Node invertBinaryTree(Node root){
         if (root==null) {
-            return;
+            return null;
         }
 
-        Queue<Node> q= new LinkedList<>();
+        Node left=invertBinaryTree(root.left);
+        Node right=invertBinaryTree(root.right);
+
+        root.left=right;
+        root.right=left;
+
+        return root;
     }
 
     // public static void levelOrder(Node root){

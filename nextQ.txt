@@ -1,0 +1,557 @@
+===================================
+LEETCODE QUESTIONS TO SOLVE NEXT
+Based on Your Current Knowledge Base
+===================================
+
+Legend:
+[D] = Direct application of concepts you know
+[I] = Indirect - combines multiple concepts
+[E] = Easy | [M] = Medium | [H] = Hard
+
+===================================
+SECTION 1: ARRAYS
+===================================
+
+--- Basic Array Operations (Direct) ---
+[D][E] 26 - Remove Duplicates from Sorted Array
+[D][E] 27 - Remove Element
+[D][E] 88 - Merge Sorted Array
+[D][E] 283 - Move Zeroes
+[D][E] 485 - Max Consecutive Ones
+[D][E] 1089 - Duplicate Zeros
+[D][E] 1295 - Find Numbers with Even Number of Digits
+[D][M] 189 - Rotate Array
+[D][M] 122 - Best Time to Buy and Sell Stock II
+[D][M] 1004 - Max Consecutive Ones III
+
+--- Two Pointers (Direct) ---
+[D][E] 1 - Two Sum
+[D][E] 283 - Move Zeroes
+[D][M] 75 - Sort Colors
+[D][M] 80 - Remove Duplicates from Sorted Array II
+[D][M] 209 - Minimum Size Subarray Sum
+[D][M] 845 - Longest Mountain in Array
+[D][M] 713 - Subarray Product Less Than K
+[D][H] 42 - Trapping Rain Water (already attempted, revisit)
+
+--- Sliding Window (Indirect - Arrays + Logic) ---
+[I][E] 643 - Maximum Average Subarray I
+[I][M] 3 - Longest Substring Without Repeating Characters (practice more)
+[I][M] 438 - Find All Anagrams in a String
+[I][M] 567 - Permutation in String
+[I][M] 1052 - Grumpy Bookstore Owner
+[I][M] 1423 - Maximum Points You Can Obtain from Cards
+
+--- Binary Search Advanced (Direct) ---
+[D][M] 34 - Find First and Last Position of Element in Sorted Array
+[D][M] 162 - Find Peak Element
+[D][M] 153 - Find Minimum in Rotated Sorted Array
+[D][M] 74 - Search a 2D Matrix
+[D][M] 875 - Koko Eating Bananas
+[D][H] 4 - Median of Two Sorted Arrays
+
+--- Subarray Problems (Indirect) ---
+[I][M] 152 - Maximum Product Subarray
+[I][M] 238 - Product of Array Except Self
+[I][M] 560 - Subarray Sum Equals K
+[I][M] 974 - Subarray Sums Divisible by K
+[I][M] 325 - Maximum Size Subarray Sum Equals k
+
+===================================
+SECTION 2: STRINGS
+===================================
+
+--- Basic String Operations (Direct) ---
+[D][E] 344 - Reverse String
+[D][E] 387 - First Unique Character in a String
+[D][E] 383 - Ransom Note
+[D][E] 459 - Repeated Substring Pattern
+[D][E] 796 - Rotate String
+[D][M] 151 - Reverse Words in a String
+[D][M] 557 - Reverse Words in a String III
+
+--- String Manipulation (Direct) ---
+[D][E] 13 - Roman to Integer
+[D][E] 14 - Longest Common Prefix
+[D][E] 680 - Valid Palindrome II
+[D][M] 12 - Integer to Roman
+[D][M] 6 - Zigzag Conversion
+[D][M] 8 - String to Integer (atoi)
+
+--- Pattern Matching (Indirect - String + Logic) ---
+[I][M] 28 - Find the Index of the First Occurrence in a String
+[I][M] 214 - Shortest Palindrome
+[I][M] 686 - Repeated String Match
+
+--- Anagram/Character Frequency (Indirect) ---
+[I][E] 242 - Valid Anagram
+[I][E] 389 - Find the Difference
+[I][M] 49 - Group Anagrams
+[I][M] 833 - Find And Replace in String
+
+===================================
+SECTION 3: LINKED LIST
+===================================
+
+--- Basic Operations (Direct) ---
+[D][E] 83 - Remove Duplicates from Sorted List
+[D][E] 160 - Intersection of Two Linked Lists
+[D][E] 203 - Remove Linked List Elements
+[D][E] 237 - Delete Node in a Linked List
+[D][M] 2 - Add Two Numbers
+[D][M] 82 - Remove Duplicates from Sorted List II
+[D][M] 92 - Reverse Linked List II
+[D][M] 328 - Odd Even Linked List
+
+--- Two Pointer Technique (Direct) ---
+[D][E] 876 - Middle of the Linked List
+[D][M] 19 - Remove Nth Node From End of List
+[D][M] 143 - Reorder List
+[D][M] 61 - Rotate List
+
+--- Fast & Slow Pointers (Direct) ---
+[D][E] 141 - Linked List Cycle
+[D][M] 142 - Linked List Cycle II
+[D][M] 287 - Find the Duplicate Number
+
+--- Merge/Sort (Direct) ---
+[D][E] 21 - Merge Two Sorted Lists
+[D][M] 148 - Sort List (Merge Sort)
+[D][M] 86 - Partition List
+[D][H] 23 - Merge k Sorted Lists
+
+--- Advanced (Indirect) ---
+[I][M] 138 - Copy List with Random Pointer
+[I][M] 109 - Convert Sorted List to Binary Search Tree
+[I][M] 445 - Add Two Numbers II
+
+===================================
+SECTION 4: STACK
+===================================
+
+--- Basic Stack (Direct) ---
+[D][E] 20 - Valid Parentheses
+[D][E] 155 - Min Stack
+[D][E] 232 - Implement Queue using Stacks
+[D][E] 225 - Implement Stack using Queues
+[D][E] 496 - Next Greater Element I
+[D][E] 1021 - Remove Outermost Parentheses
+
+--- Monotonic Stack (Direct) ---
+[D][M] 503 - Next Greater Element II
+[D][M] 739 - Daily Temperatures
+[D][M] 901 - Online Stock Span
+[D][M] 1019 - Next Greater Node In Linked List
+[D][H] 84 - Largest Rectangle in Histogram (practice more)
+
+--- Expression Evaluation (Indirect) ---
+[I][M] 150 - Evaluate Reverse Polish Notation
+[I][M] 224 - Basic Calculator
+[I][M] 227 - Basic Calculator II
+[I][H] 772 - Basic Calculator III
+
+--- String with Stack (Indirect) ---
+[I][E] 1047 - Remove All Adjacent Duplicates In String
+[I][M] 394 - Decode String
+[I][M] 856 - Score of Parentheses
+[I][M] 1209 - Remove All Adjacent Duplicates in String II
+
+===================================
+SECTION 5: QUEUE & DEQUE
+===================================
+
+--- Basic Queue (Direct) ---
+[D][E] 933 - Number of Recent Calls
+[D][M] 622 - Design Circular Queue
+[D][M] 641 - Design Circular Deque
+
+--- BFS Related (Direct) ---
+[D][M] 102 - Binary Tree Level Order Traversal
+[D][M] 107 - Binary Tree Level Order Traversal II
+[D][M] 103 - Binary Tree Zigzag Level Order Traversal
+[D][M] 199 - Binary Tree Right Side View
+
+--- Sliding Window with Deque (Indirect) ---
+[I][H] 239 - Sliding Window Maximum
+[I][H] 862 - Shortest Subarray with Sum at Least K
+
+===================================
+SECTION 6: RECURSION
+===================================
+
+--- Basic Recursion (Direct) ---
+[D][E] 344 - Reverse String (recursive)
+[D][E] 206 - Reverse Linked List (recursive approach)
+[D][E] 509 - Fibonacci Number
+[D][E] 231 - Power of Two
+[D][M] 50 - Pow(x, n)
+[D][M] 779 - K-th Symbol in Grammar
+
+--- Tree Recursion (Direct) ---
+[D][E] 104 - Maximum Depth of Binary Tree
+[D][E] 110 - Balanced Binary Tree
+[D][E] 111 - Minimum Depth of Binary Tree
+[D][E] 226 - Invert Binary Tree
+[D][E] 100 - Same Tree
+[D][M] 98 - Validate Binary Search Tree
+[D][M] 101 - Symmetric Tree
+
+--- Advanced Recursion (Indirect) ---
+[I][M] 247 - Strobogrammatic Number II
+[I][M] 254 - Factor Combinations
+[I][M] 1922 - Count Good Numbers
+
+===================================
+SECTION 7: BACKTRACKING
+===================================
+
+--- Subsets & Combinations (Direct) ---
+[D][M] 78 - Subsets
+[D][M] 90 - Subsets II
+[D][M] 77 - Combinations
+[D][M] 216 - Combination Sum III
+[D][M] 39 - Combination Sum
+[D][M] 40 - Combination Sum II
+
+--- Permutations (Direct) ---
+[D][M] 46 - Permutations
+[D][M] 47 - Permutations II
+[D][M] 60 - Permutation Sequence
+[D][M] 784 - Letter Case Permutation
+
+--- Phone Number & Letters (Direct) ---
+[D][M] 17 - Letter Combinations of a Phone Number
+[D][M] 22 - Generate Parentheses
+[D][M] 93 - Restore IP Addresses
+
+--- Grid-based Backtracking (Indirect) ---
+[I][M] 79 - Word Search
+[I][M] 200 - Number of Islands (DFS/BFS)
+[I][M] 130 - Surrounded Regions
+[I][M] 417 - Pacific Atlantic Water Flow
+
+--- Advanced Backtracking (Direct) ---
+[D][M] 131 - Palindrome Partitioning
+[D][H] 51 - N-Queens
+[D][H] 52 - N-Queens II
+[D][H] 37 - Sudoku Solver
+
+===================================
+SECTION 8: BINARY TREES
+===================================
+
+--- Tree Traversal (Direct) ---
+[D][E] 94 - Binary Tree Inorder Traversal
+[D][E] 144 - Binary Tree Preorder Traversal
+[D][E] 145 - Binary Tree Postorder Traversal
+[D][M] 102 - Binary Tree Level Order Traversal
+[D][M] 103 - Binary Tree Zigzag Level Order Traversal
+
+--- Tree Properties (Direct) ---
+[D][E] 100 - Same Tree
+[D][E] 101 - Symmetric Tree
+[D][E] 104 - Maximum Depth of Binary Tree
+[D][E] 111 - Minimum Depth of Binary Tree
+[D][E] 112 - Path Sum
+[D][E] 543 - Diameter of Binary Tree
+[D][M] 110 - Balanced Binary Tree
+[D][M] 113 - Path Sum II
+[D][M] 129 - Sum Root to Leaf Numbers
+
+--- Tree Construction (Direct) ---
+[D][M] 105 - Construct Binary Tree from Preorder and Inorder Traversal
+[D][M] 106 - Construct Binary Tree from Inorder and Postorder Traversal
+[D][M] 108 - Convert Sorted Array to Binary Search Tree
+[D][M] 889 - Construct Binary Tree from Preorder and Postorder Traversal
+
+--- LCA & Distance (Direct) ---
+[D][M] 236 - Lowest Common Ancestor of a Binary Tree
+[D][M] 1123 - Lowest Common Ancestor of Deepest Leaves
+[D][M] 863 - All Nodes Distance K in Binary Tree
+
+--- Tree Views (Direct) ---
+[D][M] 199 - Binary Tree Right Side View
+[D][M] 987 - Vertical Order Traversal of a Binary Tree
+[D][H] 314 - Binary Tree Vertical Order Traversal
+
+--- Advanced Tree Problems (Indirect) ---
+[I][M] 297 - Serialize and Deserialize Binary Tree
+[I][M] 114 - Flatten Binary Tree to Linked List
+[I][M] 116 - Populating Next Right Pointers in Each Node
+[I][H] 124 - Binary Tree Maximum Path Sum
+
+===================================
+SECTION 9: BINARY SEARCH TREE (BST)
+===================================
+
+--- Basic BST (Direct) ---
+[D][E] 700 - Search in a Binary Search Tree
+[D][E] 701 - Insert into a Binary Search Tree
+[D][E] 938 - Range Sum of BST
+[D][M] 450 - Delete Node in a BST
+[D][M] 98 - Validate Binary Search Tree
+
+--- BST Properties (Direct) ---
+[D][E] 530 - Minimum Absolute Difference in BST
+[D][E] 783 - Minimum Distance Between BST Nodes
+[D][M] 230 - Kth Smallest Element in a BST
+[D][M] 501 - Find Mode in Binary Search Tree
+[D][M] 235 - Lowest Common Ancestor of a Binary Search Tree
+
+--- BST Construction & Conversion (Direct) ---
+[D][M] 108 - Convert Sorted Array to Binary Search Tree
+[D][M] 109 - Convert Sorted List to Binary Search Tree
+[D][M] 1008 - Construct Binary Search Tree from Preorder Traversal
+[D][M] 426 - Convert Binary Search Tree to Sorted Doubly Linked List
+
+--- Advanced BST (Indirect) ---
+[I][M] 96 - Unique Binary Search Trees
+[I][M] 95 - Unique Binary Search Trees II
+[I][M] 173 - Binary Search Tree Iterator
+[I][M] 449 - Serialize and Deserialize BST
+[I][H] 99 - Recover Binary Search Tree
+
+===================================
+SECTION 10: SORTING ALGORITHMS
+===================================
+
+--- Sorting Applications (Direct) ---
+[D][E] 242 - Valid Anagram
+[D][E] 349 - Intersection of Two Arrays
+[D][E] 350 - Intersection of Two Arrays II
+[D][M] 56 - Merge Intervals
+[D][M] 57 - Insert Interval
+[D][M] 75 - Sort Colors (counting sort variant)
+[D][M] 179 - Largest Number
+[D][M] 147 - Insertion Sort List
+
+--- Custom Sorting (Indirect) ---
+[I][M] 148 - Sort List (Merge Sort on LinkedList)
+[I][M] 912 - Sort an Array (practice QuickSort/MergeSort)
+[I][M] 493 - Reverse Pairs (merge sort variant)
+[I][H] 164 - Maximum Gap
+
+===================================
+SECTION 11: GREEDY ALGORITHMS
+===================================
+
+--- Interval Problems (Direct) ---
+[D][E] 605 - Can Place Flowers
+[D][M] 435 - Non-overlapping Intervals
+[D][M] 452 - Minimum Number of Arrows to Burst Balloons
+[D][M] 646 - Maximum Length of Pair Chain
+[D][M] 56 - Merge Intervals
+
+--- Greedy Selection (Direct) ---
+[D][M] 134 - Gas Station
+[D][M] 135 - Candy
+[D][M] 406 - Queue Reconstruction by Height
+[D][M] 621 - Task Scheduler
+[D][M] 714 - Best Time to Buy and Sell Stock with Transaction Fee
+
+--- Greedy String (Indirect) ---
+[I][M] 678 - Valid Parenthesis String
+[I][M] 1221 - Split a String in Balanced Strings
+[I][M] 1328 - Break a Palindrome
+
+--- Advanced Greedy (Indirect) ---
+[I][M] 1029 - Two City Scheduling
+[I][M] 1353 - Maximum Number of Events That Can Be Attended
+[I][H] 502 - IPO
+[I][H] 630 - Course Schedule III
+
+===================================
+SECTION 12: BIT MANIPULATION
+===================================
+
+--- Basic Bit Operations (Direct) ---
+[D][E] 136 - Single Number
+[D][E] 190 - Reverse Bits
+[D][E] 191 - Number of 1 Bits
+[D][E] 231 - Power of Two
+[D][E] 268 - Missing Number
+[D][E] 338 - Counting Bits
+[D][E] 461 - Hamming Distance
+
+--- Intermediate Bit Tricks (Direct) ---
+[D][M] 137 - Single Number II
+[D][M] 201 - Bitwise AND of Numbers Range
+[D][M] 260 - Single Number III
+[D][M] 318 - Maximum Product of Word Lengths
+[D][M] 371 - Sum of Two Integers
+
+--- Advanced Bit Manipulation (Indirect) ---
+[I][M] 89 - Gray Code
+[I][M] 320 - Generalized Abbreviation
+[I][M] 477 - Total Hamming Distance
+[I][H] 1178 - Number of Valid Words for Each Puzzle
+
+===================================
+SECTION 13: TWO-DIMENSIONAL ARRAYS
+===================================
+
+--- Matrix Traversal (Direct) ---
+[D][E] 766 - Toeplitz Matrix
+[D][E] 867 - Transpose Matrix
+[D][M] 48 - Rotate Image
+[D][M] 54 - Spiral Matrix
+[D][M] 59 - Spiral Matrix II
+[D][M] 885 - Spiral Matrix III
+
+--- Matrix Search (Direct) ---
+[D][M] 74 - Search a 2D Matrix
+[D][M] 240 - Search a 2D Matrix II
+[D][M] 1351 - Count Negative Numbers in a Sorted Matrix
+
+--- Matrix Modification (Indirect) ---
+[I][M] 73 - Set Matrix Zeroes
+[I][M] 289 - Game of Life
+[I][M] 36 - Valid Sudoku
+[I][M] 661 - Image Smoother
+
+--- Matrix Path Problems (Indirect) ---
+[I][M] 62 - Unique Paths
+[I][M] 63 - Unique Paths II
+[I][M] 64 - Minimum Path Sum
+[I][M] 120 - Triangle
+[I][M] 931 - Minimum Falling Path Sum
+
+===================================
+SECTION 14: DIVIDE & CONQUER
+===================================
+
+--- Classic D&C (Direct) ---
+[D][M] 912 - Sort an Array (MergeSort/QuickSort)
+[D][M] 148 - Sort List
+[D][M] 215 - Kth Largest Element in an Array
+[D][M] 973 - K Closest Points to Origin
+
+--- Advanced D&C (Indirect) ---
+[I][M] 218 - The Skyline Problem
+[I][M] 315 - Count of Smaller Numbers After Self
+[I][H] 493 - Reverse Pairs
+
+===================================
+SECTION 15: MATH & LOGIC
+===================================
+
+--- Number Theory (Direct) ---
+[D][E] 67 - Add Binary
+[D][E] 69 - Sqrt(x)
+[D][E] 202 - Happy Number
+[D][E] 263 - Ugly Number
+[D][M] 29 - Divide Two Integers
+[D][M] 166 - Fraction to Recurring Decimal
+[D][M] 258 - Add Digits
+
+--- Combinatorics (Indirect) ---
+[I][M] 31 - Next Permutation
+[I][M] 60 - Permutation Sequence
+[I][M] 62 - Unique Paths
+[I][M] 1569 - Number of Ways to Reorder Array
+
+===================================
+SECTION 16: MIXED/ADVANCED PROBLEMS
+(Requires combining multiple concepts)
+===================================
+
+--- String + Stack ---
+[I][M] 71 - Simplify Path
+[I][M] 385 - Mini Parser
+[I][M] 636 - Exclusive Time of Functions
+
+--- Array + Greedy ---
+[I][M] 45 - Jump Game II
+[I][M] 55 - Jump Game
+[I][M] 134 - Gas Station
+
+--- Tree + Recursion + Backtracking ---
+[I][M] 257 - Binary Tree Paths
+[I][M] 988 - Smallest String Starting From Leaf
+[I][H] 1028 - Recover a Tree From Preorder Traversal
+
+--- LinkedList + Two Pointers ---
+[I][M] 234 - Palindrome Linked List
+[I][M] 143 - Reorder List
+[I][H] 25 - Reverse Nodes in k-Group
+
+--- Array + Binary Search ---
+[I][M] 287 - Find the Duplicate Number
+[I][M] 540 - Single Element in a Sorted Array
+[I][H] 410 - Split Array Largest Sum
+
+===================================
+PRIORITY RECOMMENDATIONS
+(Start with these!)
+===================================
+
+HIGH PRIORITY - Build Core Skills:
+1. [E] 206 - Reverse Linked List
+2. [E] 141 - Linked List Cycle
+3. [E] 20 - Valid Parentheses
+4. [E] 155 - Min Stack
+5. [M] 102 - Binary Tree Level Order Traversal
+6. [M] 235 - Lowest Common Ancestor of BST
+7. [M] 98 - Validate Binary Search Tree
+8. [M] 78 - Subsets
+9. [M] 46 - Permutations
+10. [M] 200 - Number of Islands (intro to DFS/BFS on grid)
+
+NEXT LEVEL - Intermediate Mastery:
+11. [M] 17 - Letter Combinations of a Phone Number
+12. [M] 39 - Combination Sum
+13. [M] 236 - Lowest Common Ancestor of Binary Tree
+14. [M] 105 - Construct Binary Tree from Preorder and Inorder
+15. [M] 394 - Decode String
+16. [M] 435 - Non-overlapping Intervals
+17. [M] 230 - Kth Smallest Element in BST
+18. [M] 739 - Daily Temperatures
+19. [M] 79 - Word Search
+20. [M] 56 - Merge Intervals
+
+===================================
+STUDY PLAN SUGGESTION
+===================================
+
+Week 1-2: LinkedList & Basic Tree
+- Focus on LinkedList Easy problems
+- Tree traversals and basic properties
+- Get comfortable with recursion patterns
+
+Week 3-4: Stack & Queue
+- Monotonic stack patterns
+- Valid parentheses variants
+- Level-order traversal
+
+Week 5-6: Backtracking Deep Dive
+- Subsets, combinations, permutations
+- Grid-based problems
+- Phone number combinations
+
+Week 7-8: BST & Advanced Trees
+- BST operations and properties
+- Tree construction problems
+- LCA and path problems
+
+Week 9-10: Greedy & Intervals
+- Activity selection variants
+- Interval merging and scheduling
+- Optimization problems
+
+Week 11-12: Mixed & Challenge
+- Combine multiple concepts
+- Hard problems from each category
+- Practice timed problem-solving
+
+===================================
+NOTES
+===================================
+
+* Total questions suggested: 250+
+* Direct questions: ~150
+* Indirect questions: ~100+
+* Focus on understanding patterns, not memorizing solutions
+* After solving 50-60 of these, explore Dynamic Programming and Graphs
+* Revisit problems you found challenging after 2-3 weeks
+
+Good luck with your practice! 🚀
