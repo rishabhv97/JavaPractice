@@ -13,29 +13,29 @@ SECTION 1: ARRAYS
 ===================================
 
 --- Basic Array Operations (Direct) ---
-[D][E] 26 - Remove Duplicates from Sorted Array
-[D][E] 27 - Remove Element
-[D][E] 88 - Merge Sorted Array
-[D][E] 283 - Move Zeroes
-[D][E] 485 - Max Consecutive Ones
+[D][E] 26 - Remove Duplicates from Sorted Array #done
+[D][E] 27 - Remove Element #done
+[D][E] 88 - Merge Sorted Array #done
+[D][E] 283 - Move Zeroes #done
+[D][E] 485 - Max Consecutive Ones #done
 [D][E] 1089 - Duplicate Zeros
 [D][E] 1295 - Find Numbers with Even Number of Digits
-[D][M] 189 - Rotate Array
-[D][M] 122 - Best Time to Buy and Sell Stock II
-[D][M] 1004 - Max Consecutive Ones III
+[D][M] 189 - Rotate Array #done
+[D][M] 122 - Best Time to Buy and Sell Stock II #done
+[D][M] 1004 - Max Consecutive Ones III #done
 
 --- Two Pointers (Direct) ---
-[D][E] 1 - Two Sum
-[D][E] 283 - Move Zeroes
-[D][M] 75 - Sort Colors
-[D][M] 80 - Remove Duplicates from Sorted Array II
-[D][M] 209 - Minimum Size Subarray Sum
-[D][M] 845 - Longest Mountain in Array
-[D][M] 713 - Subarray Product Less Than K
-[D][H] 42 - Trapping Rain Water (already attempted, revisit)
+[D][E] 1 - Two Sum #done
+[D][E] 283 - Move Zeroes #done
+[D][M] 75 - Sort Colors #done
+[D][M] 80 - Remove Duplicates from Sorted Array II #done
+[D][M] 209 - Minimum Size Subarray Sum #done
+[D][M] 845 - Longest Mountain in Array #done
+[D][M] 713 - Subarray Product Less Than K #done
+[D][H] 42 - Trapping Rain Water (already attempted, revisit) #done
 
 --- Sliding Window (Indirect - Arrays + Logic) ---
-[I][E] 643 - Maximum Average Subarray I
+[I][E] 643 - Maximum Average Subarray I #done
 [I][M] 3 - Longest Substring Without Repeating Characters (practice more)
 [I][M] 438 - Find All Anagrams in a String
 [I][M] 567 - Permutation in String
