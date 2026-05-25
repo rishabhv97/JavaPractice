@@ -1,0 +1,40 @@
+leetcode 438Q 
+
+class Solution {
+    public List<Integer> findAnagrams(String s, String p) {
+        ArrayList<Integer> ans = new ArrayList<>();
+        int[] freq = new int[26];
+
+        for (int i = 0; i < p.length(); i++) {
+            freq[p.charAt(i) - 'a']++;
+        }
+
+        int L = 0, count = p.length();
+
+        for (int R = 0; R < s.length(); R++) {
+            char ch = s.charAt(R);
+
+            if (freq[ch - 'a'] > 0) {
+                count--;
+            }
+            freq[ch - 'a']--;
+
+            if (count == 0) {
+                ans.add(L);
+            }
+
+            if (R - L + 1 == p.length()) {
+                char leftChar = s.charAt(L);
+
+                if (freq[leftChar - 'a'] >= 0) {
+                    count++;
+                }
+                freq[leftChar - 'a']++;
+
+                L++;
+            }
+        }
+
+        return ans;
+    }
+}

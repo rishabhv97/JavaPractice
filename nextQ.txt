@@ -36,9 +36,9 @@ SECTION 1: ARRAYS
 
 --- Sliding Window (Indirect - Arrays + Logic) ---
 [I][E] 643 - Maximum Average Subarray I #done
-[I][M] 3 - Longest Substring Without Repeating Characters (practice more)
-[I][M] 438 - Find All Anagrams in a String
-[I][M] 567 - Permutation in String
+[I][M] 3 - Longest Substring Without Repeating Characters (practice more) #done
+[I][M] 438 - Find All Anagrams in a String #done
+[I][M] 567 - Permutation in String #done
 [I][M] 1052 - Grumpy Bookstore Owner
 [I][M] 1423 - Maximum Points You Can Obtain from Cards
 

@@ -68,9 +68,11 @@ public class lowestCommonAncestor {
 
         // when one Lca on left or right is val and other is null
 
+        // when left pe dono ho
         if (rightLca==null) {
             return leftLca;
         }
+        // when right pe dono ho 
         if (leftLca == null) {
             return rightLca;
         }
