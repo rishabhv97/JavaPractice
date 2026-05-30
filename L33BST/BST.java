@@ -167,6 +167,33 @@ public class BST {
         return root;
     }
 
+    public static void preorder(Node root){
+        if (root==null) {
+            return;
+        }
+
+        System.out.print(root.data + " ");
+        preorder(root.left);
+        preorder(root.right);
+
+    }
+
+    // Sorted array to Balanced BST
+    public static Node createBST(arr[], int st, int end ){
+        
+        if (st>end) {
+            return null;
+        }
+        int mid= (st+end)/2;
+
+        Node root = new Node(arr[mid]);
+        root.left = createBST(arr, st, mid-1);
+        root.right = createBST(arr, mid+1, end);
+
+        return root;
+    }
+
+
     public static void main(String[] args) {
         int values[] = { 8, 5, 3, 1, 4, 6, 10, 11, 14 };
         Node root = null;
