@@ -1,4 +1,4 @@
-package L35Heaps;
+package L36Hashing;
 
 import java.util.HashSet;
 
