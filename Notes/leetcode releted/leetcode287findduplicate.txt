@@ -1,0 +1,151 @@
+📝 Find Duplicate Number (Floyd's Cycle Detection) — Notes
+Problem Properties
+Array size = n + 1
+Values are in range [1, n]
+Exactly one number is duplicated
+Cannot modify array
+O(1) extra space preferred
+💡 Core Idea
+
+Treat the array as a linked list.
+
+Instead of:
+
+index 0 contains value 1
+
+think:
+
+0 → 1
+
+In general:
+
+index i → nums[i]
+Example
+nums = [1,3,4,2,2]
+
+Graph:
+
+0 → 1
+1 → 3
+3 → 2
+2 → 4
+4 → 2
+
+Visual:
+
+0 → 1 → 3 → 2 → 4
+          ↑     ↓
+          └─────┘
+Why does a cycle exist?
+n+1 nodes
+Only n possible values
+
+By the Pigeonhole Principle, some value must be visited more than once.
+
+That repeated value creates a cycle.
+
+Why is the duplicate the cycle entrance?
+
+Duplicate value:
+
+2
+
+because:
+
+nums[3] = 2
+nums[4] = 2
+
+Two paths merge into node 2.
+
+Therefore:
+
+Cycle starts at 2
+Duplicate number = Cycle entrance
+Phase 1: Detect Cycle
+
+Use Floyd's algorithm.
+
+slow = 1 step
+fast = 2 steps
+
+Move:
+
+slow = nums[slow];
+fast = nums[nums[fast]];
+
+Eventually:
+
+slow == fast
+
+This confirms a cycle exists.
+
+Phase 2: Find Cycle Entrance
+
+Reset:
+
+slow = 0;
+
+Keep:
+
+fast = meetingPoint;
+
+Move both:
+
+slow = nums[slow];
+fast = nums[fast];
+
+one step at a time.
+
+When they meet again:
+
+meeting point = cycle entrance
+
+which is:
+
+duplicate number
+Why does Phase 2 work?
+
+Let:
+
+x = distance from start to cycle entrance
+y = distance from entrance to first meeting point
+c = cycle length
+
+At first meeting:
+
+slow distance = x + y
+fast distance = 2(x + y)
+
+Difference:
+
+x + y = k × c
+
+which implies:
+
+x = k × c − y
+
+Meaning:
+
+Distance from start to entrance
+=
+Distance from meeting point to entrance
+
+So moving both pointers one step at a time makes them meet at the cycle entrance.
+
+Complexity
+Time  : O(n)
+Space : O(1)
+Mental Shortcut for Interviews
+Array → Linked List
+
+Duplicate → Cycle
+
+Duplicate Number → Cycle Entrance
+
+Use Floyd's Cycle Detection
+to find the cycle entrance.
+Template to Remember
+1. Move slow(1x) and fast(2x) until they meet.
+2. Reset slow to start.
+3. Move both 1 step at a time.
+4. Meeting point = duplicate number.
