@@ -1,0 +1,166 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+
+\geometry{top=0.5in, bottom=0.5in, left=0.6in, right=0.6in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape \textbf{Atishay Kumar Pandey}} \\ \vspace{4pt}
+    \small
+    \faPhone\ +91 8400472259 \quad
+    \faEnvelope\ \href{mailto:newatishay9@gmail.com}{newatishay9@gmail.com} \quad
+    \faLinkedin\ \href{https://linkedin.com/in/atishay09}{linkedin.com/in/atishay09} \quad
+    \faGithub\ \href{https://github.com/Atishay9324}{github.com/Atishay9324}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Madan Mohan Malaviya University of Technology}{Sept 2023 -- May 2027}
+      {B.Tech. in Mechanical Engineering}{Gorakhpur, Uttar Pradesh}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{KrishiMitra -- AI Agricultural Platform} $|$ \emph{React, Node.js, NLP, Computer Vision, RAG} \faLink}{October 2025}
+      \resumeItemListStart
+        \resumeItem{Selected among top 50 teams in Smart India Hackathon 2025 from 10,000+ participants by developing AI-powered agricultural advisory platform reducing farmer dependency on helplines by 70\%. \textbf{Certificate} \faLink}
+        \resumeItem{Engineered multilingual AI chatbot supporting 5+ languages using NLP and speech-to-text APIs with 92\% accuracy in crop disease detection using computer vision models.}
+        \resumeItem{Integrated RAG-based recommendation engine analyzing 10,000+ agricultural datasets and built scalable backend with Node.js.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{AI Recruitment Platform} $|$ \emph{React, Node.js, MongoDB, RAG, DeepSeek, Python} \faCode\ \faExternalLink}{August 2025}
+      \resumeItemListStart
+        \resumeItem{Developed dual-panel recruitment platform enabling candidates to build dynamic portfolios and recruiters to auto-generate intelligent job descriptions using contextual data and role-based parameters.}
+        \resumeItem{Engineered GenAI-powered candidate-recruiter matching algorithm leveraging JD semantics to rank best-fit profiles, reducing manual screening time by 40\% using RAG and Qdrant vector database.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{AI Website Generator} $|$ \emph{Python, LangChain, Multi-Agent Systems, OpenAI API} \faCode\ \faExternalLink}{April 2025}
+      \resumeItemListStart
+        \resumeItem{Architected multi-agent CLI tool using LangChain orchestrating 4 specialized AI agents (designer, developer, tester, optimizer) to autonomously generate production-ready websites from natural language prompts.}
+        \resumeItem{Implemented agentic workflow automation reducing website development time by 80\%, generating 50+ lines of clean HTML/CSS/JavaScript code per prompt with 95\% functional accuracy.}
+        \resumeItem{Integrated OpenAI API with custom agent coordination logic processing 200+ tokens per request, achieving 3-second average generation time for complete landing pages with responsive design.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{AI HR Automation Workflow} $|$ \emph{n8n, OpenAI, LangChain, Google Sheets, Gmail API, Google Docs}}{[Month Year]}
+      \resumeItemListStart
+        \resumeItem{Built an end-to-end no-code AI recruitment pipeline in n8n using 3 advanced AI nodes — Information Extractor, Summarizer Chain, and Basic LLM Chain — to automatically parse resumes, generate candidate summaries, and score applicants (1--10) against live job descriptions fetched from Google Docs.}
+        \resumeItem{Implemented structured output parsing and conditional branching logic to classify candidates as Shortlisted, Maybe, or Ignored, with automated Gmail notifications dispatched to shortlisted candidates.}
+        \resumeItem{Integrated real-time Google Sheets logging of applicant profiles, AI scores, and evaluation justifications, creating a fully automated, touchless recruitment tracker requiring zero manual intervention.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:} Python, JavaScript, TypeScript, C, C++, SQL \\
+     \textbf{Frontend Development:} React, Native, Redux, Next.js, Tailwind CSS, shadcn/ui, Bootstrap, Responsive Design \\
+     \textbf{Backend Development:} Node.js, Express.js, RESTful APIs, GraphQL, Microservices, MongoDB, PostgreSQL, MySQL, Redis, Firebase, Appwrite \\
+     \textbf{GenAI \& LLM Technologies:} LangChain, LangGraph, RAG, N8N, Vector Databases (Qdrant, Pinecone, PG Vector), OpenAI API, Prompt Engineering, Multi-Agent Systems, LLM Fine-tuning, Embeddings \\
+     \textbf{Tools and Soft Skills:} Git, GitHub, Design Tools --- Public Speaking, Leadership, Communication, Problem Solving
+    }}
+ \end{itemize}
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Full Stack Web Development with DevOps Specialization} \faLink}{2024 -- 2025}
+      \resumeItemListStart
+        \resumeItem{290+ hour certification: MERN Stack, Docker, CI/CD, AWS, Microservices, Redis, Modern DevOps practices}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Generative AI \& Large Language Models Professional Certificate} \faLink}{2025}
+      \resumeItemListStart
+        \resumeItem{LLM fundamentals, AI Agents, RAG, LangChain, Vector Databases, Prompt Engineering}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{AlgoUniversity -- Graph Theory Programming Camp} \faLink}{2025}
+      \resumeItemListStart
+        \resumeItem{Completed under mentorship of Codeforces Master Manas Kumar Verma, solving 17 advanced graph problems}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------LEADERSHIP & EXTRACURRICULAR-----------
+\section{Leadership \& Extracurricular}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Google Developer Group on Campus, MMMUT}}{Aug 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{\textit{Android Development Lead}}
+        \resumeItem{Leading Android development track for 100+ students, organizing 10+ workshops on mobile app development, mentoring 15 developers resulting in 20\% code quality improvement.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\end{document}

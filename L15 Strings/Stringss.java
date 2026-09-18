@@ -165,7 +165,7 @@ public class Stringss {
         // String str3="dil ka dariya bah hi gya";
         // System.out.println(toUpperCase(str3));
 
-
+        
         String strrr ="aaabbcccd";
         System.out.println(compress(strrr));
         System.out.println(compress2(strrr));
